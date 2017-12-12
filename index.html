@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Image Inserter</title>
+	
+</head>
+<body>
+<style>
+	body {
+		font-family: pragmatica, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+	}
+	.UILoyaltyOffer__wrapper_2lte9 {
+		position: relative;
+		display: block;
+		width: 100%;
+		max-width: 360px;
+		border: 1px solid #dddfe0;
+		border-radius: 6px;
+		text-align: center;
+		cursor: pointer;
+	}
+	.Link__link_3Y7f2 {
+		cursor: pointer;
+		border: 0;
+		background: transparent;
+		outline: 0;
+		text-decoration: none;
+		color: #333;
+	}
+	.UILoyaltyOffer__height100_2gSA5 {
+		height: 100%;
+	}
+	.UILoyaltyOffer__height100_2gSA5 {
+		height: 100%;
+	}
+	.UILoyaltyOffer__topContent_2nKic {
+		position: relative;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+		height: 175px;
+	}
+	.UILoyaltyOffer__name_wwm_W {
+		position: relative;
+		z-index: 1;
+		margin-bottom: 6px;
+		padding: 37px 18px 0;
+		background-color: #ffffff;
+		text-align: center;
+	}
+	.Text__text_3WKsv {
+		font-family: pragmatica, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+		font-size: 13px;
+		color: inherit;
+		line-height: 18px;
+		white-space: normal;
+		word-wrap: break-word;
+	}
+	.Text__text_size_17_HhZgX {
+		font-size: 17px;
+		line-height: 24px;
+	}
+	.UILoyaltyOffer__imageWrapper_3E8GZ {
+		position: relative;
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		background-color: #c7c9cc;
+		background-image: url(http://localhost:4000/assets/compiled/43496c8….jpg);
+		background-position: center;
+		background-size: cover;
+	}
+	.ui-logo_size_60 {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+	}
+	.ui-logo {
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 28px;
+		border-radius: 50%;
+		color: #fff;
+		vertical-align: middle;
+	}
+	.ui-logo__first-letter {
+		letter-spacing: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	.UILoyaltyOffer__logo_36DCX {
+		position: absolute;
+		bottom: -30px;
+		left: 50%;
+		z-index: 1;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+		background-color: #dddfe0;
+	}
+	.UILoyaltyOffer__bottomContent_20PDz {
+		position: relative;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		padding: 0 18px 18px;
+		height: -webkit-calc(100% - 175px);
+		height: calc(100% - 175px);
+	}
+	.UILoyaltyOffer__article_1gmT- {
+		margin-bottom: 19px;
+	}
+	.UILoyaltyOffer__value_2-sIi {
+		margin-bottom: 4px;
+	}
+	.Text__text_size_40_2yX9u {
+		font-size: 40px;
+		line-height: 42px;
+	}
+	.Text__text_size_13_3uytC {
+		font-size: 13px;
+		line-height: 18px;
+	}
+	.UILoyaltyOffer__footer_1UPea {
+		position: relative;
+		z-index: 1;
+		margin-top: auto;
+	}
+	.UILoyaltyOffer__activatedText_36RoW {
+		padding: 13px 0 11px;
+		opacity: .3;
+	}
+	.Text__text_uppercase_true_3s_zx {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	.wrapper {
+		padding: 40px 13px;
+	}
+	.title {
+		margin: 0 0 30px;
+	}
+	.inputBlock {
+		margin-bottom: 30px;
+	}
+	#input {
+		max-width: 480px;
+		width: calc(100% - 78px);
+		font-size: 17px;
+		box-shadow: none;
+		outline: none;
+		margin-bottom: 8px;
+		height: 60px;
+		vertical-align: top;
+		box-sizing: border-box;
+		padding: 0 18px;
+	}
+	#btn {
+		padding: 12px 32px;
+		height: 60px;
+		line-height: 38px;
+		box-sizing: border-box;
+		background-color: #ffdd2d;
+		border: none;
+		border-radius: 6px;
+		outline: none;
+		text-align: center;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 24px;
+		cursor: pointer;
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+		margin-left: -6px;
+	}
+	#clearInput {
+		display: block;
+		box-sizing: border-box;
+		padding: 5px 18px 5px 0;
+		width: 100px;
+		color: #8a8888;
+		font-size: 17px;
+		cursor: pointer;
+	}
+	
+</style>
+<div class='wrapper'>
+	
+		<h1 class='title'>Image inserter</h1>
+	<div class="inputBlock">
+		<input id='input' type='text'>
+		<div id='btn' onclick=insertImage()> > </div>
+		<div id='clearInput' onclick=clearInput()> Очистить </div>
+	</div>
+	
+	<div class="card">
+		<div class="UILoyaltyOffer__wrapper_2lte9" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+			<a class="Link__link_3Y7f2 Link__link_color_inherit_PVtsb Link__link_type_simple_33FTx Link__link_nodecorated_I-hxB" data-qa-file="Link">
+				<div class="UILoyaltyOffer__height100_2gSA5" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+					<div class="UILoyaltyOffer__height100_2gSA5" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+						<div class="UILoyaltyOffer__topContent_2nKic" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+							<div class="UILoyaltyOffer__name_wwm_W" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+								<div class="Text__text_3WKsv Text__text_size_17_HhZgX Text__text_weight_600_et-ia" data-qa-node="WrappedComponent" data-qa-file="Text">Название брэнда</div>
+							</div>
+
+							<div id='imageDiv' class="UILoyaltyOffer__imageWrapper_3E8GZ" style="background-image: url(https://testtarget.tcsbank.ru/images/image626/big/m_2658.jpg)">
+								<div class="ui-logo ui-logo_size_60 UILoyaltyOffer__logo_36DCX" data-qa-node="div" data-qa-file="UILogoWrapper8">
+									<span class="ui-logo__first-letter" data-qa-node="span" data-qa-file="UILogoSimple4"></span>
+								</div>
+							</div>
+
+						</div>
+						<div class="UILoyaltyOffer__bottomContent_20PDz" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+							<div class="UILoyaltyOffer__article_1gmT-" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+								<div class="UILoyaltyOffer__value_2-sIi" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+									<div class="Text__text_3WKsv Text__text_size_40_2yX9u" data-qa-node="WrappedComponent" data-qa-file="Text">
+										<span data-qa-node="span" data-qa-file="UILoyaltyOffer">7%</span>
+									</div>
+								</div>
+								<div class="Text__text_3WKsv Text__text_size_13_3uytC" data-qa-node="WrappedComponent" data-qa-file="Text">&nbsp;на все покупки <br data-qa-node="br" data-qa-file="UILoyaltyOffer"></div>
+							</div>
+							<div class="UILoyaltyOffer__footer_1UPea" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+								<div class="UILoyaltyOffer__activatedText_36RoW" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+									<div class="Text__text_3WKsv Text__text_uppercase_true_3s_zx Text__text_size_13_3uytC" data-qa-node="WrappedComponent" data-qa-file="Text">Активировано</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<script>
+	var imageDiv = document.getElementById('imageDiv')
+	var btn = document.getElementById('btn')
+	var input = document.getElementById('input')
+	
+	function insertImage() {
+		imageDiv.style.backgroundImage = `url(${input.value})`
+	}
+    function clearInput() {
+        input.value=''
+    }
+</script>
+</body>
+</html>
