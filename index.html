@@ -346,7 +346,13 @@
         imagesDivs.forEach(item => item.style.backgroundImage = `url(${inputLink.value})`)
 	}
 	function insertBrandName() {
-        brandTexts.forEach(item => item.innerHTML = `${inputBrand.value}`)
+        brandTexts.forEach(item => {
+            if( inputBrand.value === '') {
+            	return item.innerHTML = 'Название брэнда'
+			}
+			
+			return item.innerHTML = `${inputBrand.value}`
+		})
 	}
     function clearInputLink() {
         inputLink.value=''
