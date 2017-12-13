@@ -69,7 +69,6 @@
 		border-top-left-radius: 5px;
 		border-top-right-radius: 5px;
 		background-color: #c7c9cc;
-		background-image: url(http://localhost:4000/assets/compiled/43496c8….jpg);
 		background-position: center;
 		background-size: cover;
 	}
@@ -146,14 +145,14 @@
 		letter-spacing: 1px;
 	}
 	.wrapper {
-		padding: 40px 13px;
+		padding: 30px 13px;
 	}
 	.title {
-		margin: 0 0 40px;
+		margin: 0 0 24px;
 		font-size: 40px;
 	}
 	.inputBlock {
-		margin-bottom: 30px;
+		margin-bottom: 22px;
 	}
 	.inputTitle {
 		font-size: 19px;
@@ -235,10 +234,10 @@
 					<div class="UILoyaltyOffer__height100_2gSA5" data-qa-node="div" data-qa-file="UILoyaltyOffer">
 						<div class="UILoyaltyOffer__topContent_2nKic" data-qa-node="div" data-qa-file="UILoyaltyOffer">
 							<div class="UILoyaltyOffer__name_wwm_W" data-qa-node="div" data-qa-file="UILoyaltyOffer">
-								<div id='brandText' class="Text__text_3WKsv Text__text_size_17_HhZgX Text__text_weight_600_et-ia" data-qa-node="WrappedComponent" data-qa-file="Text">Название брэнда</div>
+								<div class="Text__text_3WKsv Text__text_size_17_HhZgX Text__text_weight_600_et-ia" data-qa-node="WrappedComponent" data-qa-file="Text"><span class="brandText">Название брэнда</span></div>
 							</div>
 
-							<div id='imageDiv' class="UILoyaltyOffer__imageWrapper_3E8GZ" style="background-image: url(https://testtarget.tcsbank.ru/images/image626/big/m_2658.jpg)">
+							<div id='imageDiv' class="imagesDiv UILoyaltyOffer__imageWrapper_3E8GZ" style="background-image: url(https://www.surfingengland.org/wp-content/uploads/2017/03/surfing-england.jpg)">
 								<div class="ui-logo ui-logo_size_60 UILoyaltyOffer__logo_36DCX" data-qa-node="div" data-qa-file="UILogoWrapper8">
 									<span class="ui-logo__first-letter" data-qa-node="span" data-qa-file="UILogoSimple4"></span>
 								</div>
@@ -273,10 +272,10 @@
 					<div class="UILoyaltyOffer__height100_2gSA5" data-qa-node="div" data-qa-file="UILoyaltyOffer">
 						<div class="UILoyaltyOffer__topContent_2nKic" data-qa-node="div" data-qa-file="UILoyaltyOffer">
 							<div class="UILoyaltyOffer__name_wwm_W" data-qa-node="div" data-qa-file="UILoyaltyOffer">
-								<div id='brandText2' class="Text__text_3WKsv Text__text_size_17_HhZgX Text__text_weight_600_et-ia" data-qa-node="WrappedComponent" data-qa-file="Text">Название брэнда</div>
+								<div class="Text__text_3WKsv Text__text_size_17_HhZgX Text__text_weight_600_et-ia" data-qa-node="WrappedComponent" data-qa-file="Text"><span class="brandText">Название брэнда</span></div>
 							</div>
 
-							<div id='imageDiv2' class="UILoyaltyOffer__imageWrapper_3E8GZ" style="background-image: url(https://testtarget.tcsbank.ru/images/image626/big/m_2658.jpg)">
+							<div class="imagesDiv UILoyaltyOffer__imageWrapper_3E8GZ" style="background-image: url(https://www.surfingengland.org/wp-content/uploads/2017/03/surfing-england.jpg)">
 								<div class="ui-logo ui-logo_size_60 UILoyaltyOffer__logo_36DCX" data-qa-node="div" data-qa-file="UILogoWrapper8">
 									<span class="ui-logo__first-letter" data-qa-node="span" data-qa-file="UILogoSimple4"></span>
 								</div>
@@ -306,20 +305,17 @@
 </div>
 
 <script>
-	var imageDiv = document.getElementById('imageDiv')
-	var imageDiv2 = document.getElementById('imageDiv2')
-	var brandText = document.getElementById('brandText')
-	var brandText2 = document.getElementById('brandText2')
 	var inputLink = document.getElementById('inputLink')
 	var inputBrand = document.getElementById('inputBrand')
+    
+    var imagesDivs = document.querySelectorAll('.imagesDiv')
+    var brandTexts = document.querySelectorAll('.brandText')
 	
 	function insertImage() {
-		imageDiv.style.backgroundImage = `url(${inputLink.value})`
-		imageDiv2.style.backgroundImage = `url(${inputLink.value})`
+        imagesDivs.forEach(item => item.style.backgroundImage = `url(${inputLink.value})`)
 	}
 	function insertBrandName() {
-        brandText.innerHTML = `${inputBrand.value}`
-        brandText2.innerHTML = `${inputBrand.value}`
+        brandTexts.forEach(item => item.innerHTML = `${inputBrand.value}`)
 	}
     function clearInputLink() {
         inputLink.value=''
