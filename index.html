@@ -144,11 +144,25 @@
 		text-transform: uppercase;
 		letter-spacing: 1px;
 	}
+	a {
+		text-decoration: none;
+		color: #2474de;
+		transition: all .23s ease;
+	}
+	a:hover {
+		color: #285b9e;
+	}
+	.uploadSiteLink {
+		font-size: 15px;
+		margin: 0 0 30px;
+		display: inline-block;
+		padding: 5px 18px;
+	}
 	.wrapper {
-		padding: 30px 13px;
+		padding: 30px 13px 0;
 	}
 	.title {
-		margin: 0 0 24px;
+		margin: 0 0 10px;
 		font-size: 40px;
 	}
 	.inputBlock {
@@ -190,7 +204,8 @@
 		margin-left: -6px;
 	}
 	.clearInput {
-		display: block;
+		display: inline-block;
+		margin-right: 255px;
 		box-sizing: border-box;
 		padding: 5px 18px 5px 0;
 		width: 100px;
@@ -209,6 +224,13 @@
 	.card--min {
 		max-width: 233px;
 	}
+	.version {
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		font-size: 12px;
+		color: #8e8e8e;
+	}
 </style>
 <div class='wrapper'>
 	
@@ -217,7 +239,10 @@
 		<div class="inputTitle">Ссылка на картинку</div>
 		<input class='input' id='inputLink' type='text'>
 		<div class='btn' id='btnLink' onclick=insertImage()> > </div>
-		<div class='clearInput' id='clearInputLink' onclick=clearInputLink()> Очистить </div>
+		<div>
+			<div class='clearInput' id='clearInputLink' onclick=clearInputLink()> Очистить </div>
+			<a href="http://radikal.ru/" class="uploadSiteLink" target='_blank'>Сайт для выгрузки фото</a>
+		</div>
 	</div>
 
 	<div class="inputBlock">
@@ -302,6 +327,8 @@
 			</a>
 		</div>
 	</div>
+	
+	<div class="version">v0.0.2</div>
 </div>
 
 <script>
