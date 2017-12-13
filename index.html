@@ -149,24 +149,30 @@
 		padding: 40px 13px;
 	}
 	.title {
-		margin: 0 0 30px;
+		margin: 0 0 40px;
+		font-size: 40px;
 	}
 	.inputBlock {
 		margin-bottom: 30px;
 	}
-	#input {
+	.inputTitle {
+		font-size: 19px;
+		font-weight: 500;
+		margin-bottom: 10px;
+	}
+	.input {
 		max-width: 480px;
 		width: calc(100% - 78px);
 		font-size: 17px;
 		box-shadow: none;
 		outline: none;
-		margin-bottom: 8px;
+		margin-bottom: 4px;
 		height: 60px;
 		vertical-align: top;
 		box-sizing: border-box;
 		padding: 0 18px;
 	}
-	#btn {
+	.btn {
 		padding: 12px 32px;
 		height: 60px;
 		line-height: 38px;
@@ -184,24 +190,42 @@
 		border-top-left-radius: 0;
 		margin-left: -6px;
 	}
-	#clearInput {
+	.clearInput {
 		display: block;
 		box-sizing: border-box;
 		padding: 5px 18px 5px 0;
 		width: 100px;
 		color: #8a8888;
-		font-size: 17px;
+		font-size: 15px;
+		cursor: pointer;
+		transition: all .23s ease;
+	}
+	.clearInput:hover {
+		color: #555;
 		cursor: pointer;
 	}
-	
+	.card {
+		margin-bottom: 30px;
+	}
+	.card--min {
+		max-width: 233px;
+	}
 </style>
 <div class='wrapper'>
 	
-		<h1 class='title'>Image inserter</h1>
+	<h1 class='title'>Image inserter</h1>
 	<div class="inputBlock">
-		<input id='input' type='text'>
-		<div id='btn' onclick=insertImage()> > </div>
-		<div id='clearInput' onclick=clearInput()> Очистить </div>
+		<div class="inputTitle">Ссылка на картинку</div>
+		<input class='input' id='inputLink' type='text'>
+		<div class='btn' id='btnLink' onclick=insertImage()> > </div>
+		<div class='clearInput' id='clearInputLink' onclick=clearInputLink()> Очистить </div>
+	</div>
+
+	<div class="inputBlock">
+		<div class="inputTitle">Название брэнда</div>
+		<input class='input' id='inputBrand' type='text'>
+		<div class='btn' id='btnBrand' onclick=insertBrandName()> > </div>
+		<div class='clearInput' id='clearInputBrand' onclick=clearInputBrand()> Очистить </div>
 	</div>
 	
 	<div class="card">
@@ -211,10 +235,48 @@
 					<div class="UILoyaltyOffer__height100_2gSA5" data-qa-node="div" data-qa-file="UILoyaltyOffer">
 						<div class="UILoyaltyOffer__topContent_2nKic" data-qa-node="div" data-qa-file="UILoyaltyOffer">
 							<div class="UILoyaltyOffer__name_wwm_W" data-qa-node="div" data-qa-file="UILoyaltyOffer">
-								<div class="Text__text_3WKsv Text__text_size_17_HhZgX Text__text_weight_600_et-ia" data-qa-node="WrappedComponent" data-qa-file="Text">Название брэнда</div>
+								<div id='brandText' class="Text__text_3WKsv Text__text_size_17_HhZgX Text__text_weight_600_et-ia" data-qa-node="WrappedComponent" data-qa-file="Text">Название брэнда</div>
 							</div>
 
 							<div id='imageDiv' class="UILoyaltyOffer__imageWrapper_3E8GZ" style="background-image: url(https://testtarget.tcsbank.ru/images/image626/big/m_2658.jpg)">
+								<div class="ui-logo ui-logo_size_60 UILoyaltyOffer__logo_36DCX" data-qa-node="div" data-qa-file="UILogoWrapper8">
+									<span class="ui-logo__first-letter" data-qa-node="span" data-qa-file="UILogoSimple4"></span>
+								</div>
+							</div>
+
+						</div>
+						<div class="UILoyaltyOffer__bottomContent_20PDz" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+							<div class="UILoyaltyOffer__article_1gmT-" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+								<div class="UILoyaltyOffer__value_2-sIi" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+									<div class="Text__text_3WKsv Text__text_size_40_2yX9u" data-qa-node="WrappedComponent" data-qa-file="Text">
+										<span data-qa-node="span" data-qa-file="UILoyaltyOffer">7%</span>
+									</div>
+								</div>
+								<div class="Text__text_3WKsv Text__text_size_13_3uytC" data-qa-node="WrappedComponent" data-qa-file="Text">&nbsp;на все покупки <br data-qa-node="br" data-qa-file="UILoyaltyOffer"></div>
+							</div>
+							<div class="UILoyaltyOffer__footer_1UPea" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+								<div class="UILoyaltyOffer__activatedText_36RoW" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+									<div class="Text__text_3WKsv Text__text_uppercase_true_3s_zx Text__text_size_13_3uytC" data-qa-node="WrappedComponent" data-qa-file="Text">Активировано</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div class="card card--min">
+		<div class="UILoyaltyOffer__wrapper_2lte9" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+			<a class="Link__link_3Y7f2 Link__link_color_inherit_PVtsb Link__link_type_simple_33FTx Link__link_nodecorated_I-hxB" data-qa-file="Link">
+				<div class="UILoyaltyOffer__height100_2gSA5" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+					<div class="UILoyaltyOffer__height100_2gSA5" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+						<div class="UILoyaltyOffer__topContent_2nKic" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+							<div class="UILoyaltyOffer__name_wwm_W" data-qa-node="div" data-qa-file="UILoyaltyOffer">
+								<div id='brandText2' class="Text__text_3WKsv Text__text_size_17_HhZgX Text__text_weight_600_et-ia" data-qa-node="WrappedComponent" data-qa-file="Text">Название брэнда</div>
+							</div>
+
+							<div id='imageDiv2' class="UILoyaltyOffer__imageWrapper_3E8GZ" style="background-image: url(https://testtarget.tcsbank.ru/images/image626/big/m_2658.jpg)">
 								<div class="ui-logo ui-logo_size_60 UILoyaltyOffer__logo_36DCX" data-qa-node="div" data-qa-file="UILogoWrapper8">
 									<span class="ui-logo__first-letter" data-qa-node="span" data-qa-file="UILogoSimple4"></span>
 								</div>
@@ -245,14 +307,25 @@
 
 <script>
 	var imageDiv = document.getElementById('imageDiv')
-	var btn = document.getElementById('btn')
-	var input = document.getElementById('input')
+	var imageDiv2 = document.getElementById('imageDiv2')
+	var brandText = document.getElementById('brandText')
+	var brandText2 = document.getElementById('brandText2')
+	var inputLink = document.getElementById('inputLink')
+	var inputBrand = document.getElementById('inputBrand')
 	
 	function insertImage() {
-		imageDiv.style.backgroundImage = `url(${input.value})`
+		imageDiv.style.backgroundImage = `url(${inputLink.value})`
+		imageDiv2.style.backgroundImage = `url(${inputLink.value})`
 	}
-    function clearInput() {
-        input.value=''
+	function insertBrandName() {
+        brandText.innerHTML = `${inputBrand.value}`
+        brandText2.innerHTML = `${inputBrand.value}`
+	}
+    function clearInputLink() {
+        inputLink.value=''
+    }
+    function clearInputBrand() {
+        inputBrand.value=''
     }
 </script>
 </body>
